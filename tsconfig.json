@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "skipLibCheck": true,
+      "target": "esnext",
+      "module": "commonjs",
+      "strict": true,
+      "outDir": "dist",
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "removeComments": true,
+      "esModuleInterop": true
+    },
+    "include": ["lib"],
+    "types": ["node"]
+  }
