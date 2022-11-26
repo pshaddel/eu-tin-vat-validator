@@ -36,5 +36,8 @@
 	},
 	"dependencies": {
 		"soap": "^0.45.0"
-	}
+	},
+  "publishConfig": {
+    "@pshaddel:registry": "https://npm.pkg.github.com"
+  }
 }
