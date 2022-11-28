@@ -6,8 +6,8 @@
 	"scripts": {
 		"test": "jest --forceExit --detectOpenHandles --runInBand --logHeapUsage",
 		"test:watch": "jest --forceExit --detectOpenHandles --runInBand --logHeapUsage --watch",
-    "build": "tsc -p tsconfig.json",
-    "prettier": "prettier --config .prettierrc '**/*.ts' --write"
+		"build": "tsc -p tsconfig.json",
+		"prettier": "prettier --config .prettierrc '**/*.ts' --write"
 	},
 	"repository": {
 		"type": "git",
@@ -37,7 +37,7 @@
 	"dependencies": {
 		"soap": "^0.45.0"
 	},
-  "publishConfig": {
-    "@pshaddel:registry": "https://npm.pkg.github.com"
-  }
+	"publishConfig": {
+		"@pshaddel:registry": "https://npm.pkg.github.com"
+	}
 }

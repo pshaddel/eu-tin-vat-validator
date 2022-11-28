@@ -13,7 +13,7 @@ describe("TIN Validator", () => {
 
 	test("Should get false in result of validation when TIN is not valid", async () => {
 		const { data, error } = await validateTIN(
-			"BG" as Alpha2Countries,
+			"BG",
 			"123456"
 		);
 		expect(error).toBeNull();
@@ -26,7 +26,7 @@ describe("TIN Validator", () => {
 
 	test("Should get false when syntax of TIN is not valid", async () => {
 		const { data, error } = await validateTIN(
-			"AT" as Alpha2Countries,
+			"AT",
 			"532092782"
 		);
 		expect(error).toBeNull();
@@ -37,15 +37,28 @@ describe("TIN Validator", () => {
 		expect((data as TINOutput).validSyntax).toBe(false);
 	});
 
-	test("Should get true when a valid TIN is passed", async () => {
+	test("Should get true when a valid TIN is passed - example 1", async () => {
 		const { data, error } = await validateTIN(
-			"AT" as Alpha2Countries,
+			"AT",
 			"522092782"
 		);
 		expect(error).toBeNull();
 		expect(data).not.toBeNull();
 		expect((data as TINOutput).countryCode).toBe("AT");
 		expect((data as TINOutput).tinNumber).toBe("522092782");
+		expect((data as TINOutput).validStructure).toBe(true);
+		expect((data as TINOutput).validSyntax).toBe(true);
+	});
+
+	test("Should get true when a valid TIN is passed - example 2", async () => {
+		const { data, error } = await validateTIN(
+			"BE",
+			"00012511119"
+		);
+		expect(error).toBeNull();
+		expect(data).not.toBeNull();
+		expect((data as TINOutput).countryCode).toBe("BE");
+		expect((data as TINOutput).tinNumber).toBe("00012511119");
 		expect((data as TINOutput).validStructure).toBe(true);
 		expect((data as TINOutput).validSyntax).toBe(true);
 	});
