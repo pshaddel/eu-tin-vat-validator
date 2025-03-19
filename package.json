@@ -35,7 +35,7 @@
 		"typescript": "^4.9.3"
 	},
 	"dependencies": {
-		"soap": "^0.45.0"
+		"soap": "^1.1.10"
 	},
 	"publishConfig": {
 		"@pshaddel:registry": "https://npm.pkg.github.com"
