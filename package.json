@@ -1,6 +1,6 @@
 {
 	"name": "@pshaddel/eu-tin-vat-validator",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "A package for validatin european TIN and VAT",
 	"main": "index.js",
 	"scripts": {
